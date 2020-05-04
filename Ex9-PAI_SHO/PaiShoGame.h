@@ -56,4 +56,12 @@ public:
 	*/
 
 	void set_interface_roll_dice();
+	/**
+	* @brief  set the interface of the turn - rolling dice of each player 
+	*			according to the choise of the user
+	* @return this function has no return value
+	* @notes  this function change the interface_of_rolling_dice of 
+	*			each player according to the choise of the user
+	* @author  Liri
+	*/
 };
