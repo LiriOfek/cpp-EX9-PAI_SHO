@@ -1,7 +1,7 @@
 /********************************************************\
 File Name: Player.cpp
 Author: Liri (3/5/2020)
-Purpose: This header file contain functions of Player,
+Purpose: This file contain functions of Player,
 			that roll die and get player score
 \********************************************************/
 
