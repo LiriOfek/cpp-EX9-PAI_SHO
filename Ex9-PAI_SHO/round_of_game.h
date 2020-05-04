@@ -5,6 +5,8 @@ Purpose: This header file contain class of Round_Of_Game, inherits from
 			Player, that contain declaration of functions that play
 			one round in the game
 \********************************************************/
+#pragma once
+
 #include "Player.h"
 
 const char* const ROUND = "Round ";

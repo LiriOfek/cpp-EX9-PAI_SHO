@@ -119,11 +119,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="end_of_game.h" />
     <ClInclude Include="PaiShoGame.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="round_of_game.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="end_of_game.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="PaiShoGame.cpp" />
     <ClCompile Include="Player.cpp" />

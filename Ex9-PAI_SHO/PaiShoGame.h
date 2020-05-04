@@ -8,52 +8,12 @@ Purpose: This header file contain class of PaiShoGame, that inherits from
 
 #pragma once
 #include "Player.h"
-#include "round_of_game.h"
+#include "end_of_game.h"
 
-const unsigned int TOTAL_NUMBER_OF_ROUNDS = 10;
-const unsigned int START_ROUND = 1;
-//const char* const ROUND = "Round ";
-//const char* const COLON = ":";
-//const char* const PLAYER1_SCORE = "Player 1 score: ";
-//const char* const PLAYER2_SCORE = "Player 2 score: ";
-const char* const PLAYER_1_WON = "Player 1 won!";
-const char* const PLAYER_2_WON = "Player 2 won!";
-
-class PaiShoGame :public Round_Of_Game {
+class PaiShoGame :public End_Of_Game {
 	Player player1;
 	Player player2;
 public:
 	void play();
-	/**
-	* @brief  play Pai Sho game - call function that play 10 rounds of
-	*			the game, if there was a tie than continue till there is
-	*			no tie and function that check who wins
-	* @return this function has no return value
-	* @author  Liri
-	*/
-
-	void play_10_rounds();
-	/**
-	* @brief  play 10 rounds of the game, call function that handle
-	*			tie situation, and call to function that
-	*			check who wins
-	* @return this function has no return value
-	* @author  Liri
-	*/
-
-	void handle_tie_after_10_rounds();
-	/**
-	* @brief  if there was a tie than continue in the game till there
-	*			is no tie
-	* @return this function has no return value
-	* @author  Liri
-	*/
-
-	void check_who_wins();
-	/**
-	* @brief  check who gets the lowest score and print it
-	* @return this function has no return value
-	* @author  Liri
-	*/
 
 };
