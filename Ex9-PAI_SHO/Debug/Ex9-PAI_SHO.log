@@ -1,4 +1,5 @@
 ﻿  PaiShoGame.cpp
+  Player.cpp
   end_of_game.cpp
   main.cpp
   round_of_game.cpp

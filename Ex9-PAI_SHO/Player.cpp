@@ -12,7 +12,7 @@ Player::Player() {
 	score = 0;
 }
 
-unsigned int Player::roll_die() {
+unsigned int Player::roll_regulare_die() {
 	unsigned int die_result;
 	die_result = std::rand() % NUMBER_OF_SIDES_OF_REGULARE_DIE + DIE_START;
 	score += die_result;
@@ -21,4 +21,8 @@ unsigned int Player::roll_die() {
 
 unsigned int Player::getScore() {
 	return score;
+}
+
+void Player::set_interface_of_rolling_dice(int new_interface_of_rolling_dice) {
+	interface_of_rolling_dice = new_interface_of_rolling_dice;
 }
