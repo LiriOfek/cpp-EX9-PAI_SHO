@@ -30,7 +30,7 @@ public:
 	/**
 	* @brief  roll regulare die, and add to the player score the result
 	*			of the die
-	* @params OUT unsigned int dice_result - the result of the die
+	* @params OUT unsigned int die_result - the result of the die
 	* @return the result of the die
 	* @note   the score of the player is rising by the result of the die
 	* @author  Liri
