@@ -11,6 +11,12 @@ Purpose: This header file contain class of PaiShoGame, that inherits from
 
 const unsigned int TOTAL_NUMBER_OF_ROUNDS = 10;
 const unsigned int START_ROUND = 1;
+const char* const ROUND = "Round ";
+const char* const COLON = ":";
+const char* const PLAYER1_SCORE = "Player 1 score: ";
+const char* const PLAYER2_SCORE = "Player 2 score: ";
+const char* const PLAYER_1_WON = "Player 1 won!";
+const char* const PLAYER_2_WON = "Player 2 won!";
 
 class PaiShoGame :public Player {
 	Player player1;

@@ -33,19 +33,19 @@ void PaiShoGame::handle_tie_after_10_rounds() {
 
 void PaiShoGame::check_who_wins() {
 	if (player1.getScore() < player2.getScore()) {
-		std::cout << std::endl << "Player 1 won!" << std::endl;
+		std::cout << std::endl << PLAYER_1_WON << std::endl;
 	}
 	else {
-		std::cout << std::endl << "Player 2 won!" << std::endl;
+		std::cout << std::endl << PLAYER_2_WON << std::endl;
 	}
 }
 
 void PaiShoGame::round_of_game(int number_of_round) {
-	std::cout << "Round " << number_of_round << ":" << std::endl;
+	std::cout << ROUND << number_of_round << COLON << std::endl;
 	play_turn(player1);
-	std::cout << "Player 1: " << player1.getScore() << std::endl;
+	std::cout << PLAYER1_SCORE << player1.getScore() << std::endl;
 	play_turn(player2);
-	std::cout << "Player 2: " << player2.getScore() << std::endl;
+	std::cout << PLAYER2_SCORE << player2.getScore() << std::endl;
 }
 
 unsigned int PaiShoGame::play_turn(Player &player) {
