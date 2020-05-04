@@ -17,7 +17,7 @@ void PaiShoGame::play_10_rounds() {
 		 number_of_round <= TOTAL_NUMBER_OF_ROUNDS;
 		 number_of_round++) 
 	{
-		round_of_game(number_of_round);
+		round_of_game(number_of_round, player1, player2);
 	}
 	handle_tie_after_10_rounds();
 	check_who_wins();
@@ -26,7 +26,7 @@ void PaiShoGame::play_10_rounds() {
 void PaiShoGame::handle_tie_after_10_rounds() {
 	int number_of_round = TOTAL_NUMBER_OF_ROUNDS + 1;
 	while (player1.getScore() == player2.getScore()) {
-		round_of_game(number_of_round);
+		round_of_game(number_of_round, player1, player2);
 		number_of_round++;
 	}
 }
@@ -39,19 +39,3 @@ void PaiShoGame::check_who_wins() {
 		std::cout << std::endl << PLAYER_2_WON << std::endl;
 	}
 }
-
-void PaiShoGame::round_of_game(int number_of_round) {
-	std::cout << ROUND << number_of_round << COLON << std::endl;
-	play_turn(player1);
-	std::cout << PLAYER1_SCORE << player1.getScore() << std::endl;
-	play_turn(player2);
-	std::cout << PLAYER2_SCORE << player2.getScore() << std::endl;
-}
-
-unsigned int PaiShoGame::play_turn(Player &player) {
-	unsigned int die_result = player.roll_die();
-	return die_result;
-}
-
-
-
