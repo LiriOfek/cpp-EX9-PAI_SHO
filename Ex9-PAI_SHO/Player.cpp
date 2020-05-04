@@ -14,7 +14,7 @@ Player::Player() {
 
 unsigned int Player::roll_die() {
 	unsigned int die_result;
-	die_result = roll_regulare_die();
+	die_result = roll_3_dice_with_rising_sides();
 	score += die_result;
 	return die_result;
 }

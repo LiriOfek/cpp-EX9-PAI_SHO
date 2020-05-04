@@ -1,2 +1,8 @@
-﻿  round_of_game.cpp
+﻿  PaiShoGame.cpp
+  Player.cpp
+  end_of_game.cpp
+  main.cpp
+  rolling_dice.cpp
+  round_of_game.cpp
+  Generating Code...
   Ex9-PAI_SHO.vcxproj -> C:\Users\משתמש\Documents\צבא-חפיפות\פרק פיתוח\cpp\cpp-Ex9-PAI_SHO\Ex9-PAI_SHO\Debug\Ex9-PAI_SHO.exe
