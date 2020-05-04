@@ -50,9 +50,11 @@ public:
 	* @author  Liri
 	*/
 
-	void check_who_wins(int condition);
+	void check_who_wins(bool is_player1_win);
 	/**
 	* @brief  check who gets the lowest score and print it
+	* @params IN bool is_player1_win - true if player1 wins,
+	*								   false otherwise
 	* @return this function has no return value
 	* @author  Liri
 	*/

@@ -36,8 +36,8 @@ void End_Of_Game::play_till_player_get_more_than_152_points(Player &player1, Pla
 	check_who_wins(player1.getScore() > player2.getScore());
 }
 
-void End_Of_Game::check_who_wins(int condition) {
-	if (condition) {
+void End_Of_Game::check_who_wins(bool is_player1_win) {
+	if (is_player1_win) {
 		std::cout << std::endl << PLAYER_1_WON << std::endl;
 	}
 	else {
