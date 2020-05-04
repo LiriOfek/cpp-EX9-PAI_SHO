@@ -10,12 +10,18 @@ Purpose: This header file contain class of PaiShoGame, that inherits from
 #include "Player.h"
 #include "end_of_game.h"
 
-enum END_OF_GAME { LOWEST_SCORE, MORE_THAN_152_POINTS, DIFFERENCE_OF_25 };
+const int LOWEST_SCORE = 0;
+const int MORE_THAN_152_POINTS = 1;
+const int DIFFERENCE_OF_25 = 2;
+const char* const HOW_USER_WANTS_GAME_TO_END = "How do you want the game to end?";
+const char* const TYPE_0_TO_END_AFTER_10_ROUNDS_AND_PLAYER_WITH_LOWEST_SCORE_WINS = "Type 0 - The game is oven after 10 turns, and the player with the lowest score wins";
+const char* const TYPE_1_TO_END_WHEN_PLAYER_GET_152_POINTS_OR_MORE = "Type 1 - The game is over when one of the players has more than 152 points";
+const char* const TYPE_2_THERE_IS_DIFFERENCE_OF_25_POINTS_OR_MORE_BETWEEN_THE_PLAYERS = "Type 2 - The game is over after one player has 25 points or more than the other player";
 
 class PaiShoGame :public End_Of_Game {
 	Player player1;
 	Player player2;
-	END_OF_GAME interface_end_of_game;
+	unsigned int interface_end_of_game;
 public:
 	void play();
 	/**
