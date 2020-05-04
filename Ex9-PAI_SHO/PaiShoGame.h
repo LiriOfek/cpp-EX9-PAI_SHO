@@ -28,6 +28,8 @@ public:
 	* @brief  play Pai Sho game - call function that play the game accorfing
 	*			to the interface of the end of the game
 	* @return this function has no return value
+	* @notes  this function change the score of the players, such that the
+	*			score of each player raising by the result of the dice
 	* @author  Liri
 	*/
 	void set_interface_end_of_game();

@@ -26,6 +26,8 @@ public:
 	* @brief  play 10 rounds of the game, call function that handle
 	*			tie situation, and call to function that
 	*			check who wins
+	* @params IN Player &player1 - the first player in the game
+	*		  IN Player &player2 - the second player in the game
 	* @return this function has no return value
 	* @notes  this function change the score of the players,
 	*			such that the score of each player raising by the result
@@ -38,6 +40,8 @@ public:
 	/**
 	* @brief  if there was a tie than continue in the game till there
 	*			is no tie
+	* @params IN Player &player1 - the first player in the game
+	*		  IN Player &player2 - the second player in the game
 	* @return this function has no return value
 	* @notes  this function change the score of the players,
 	*			such that the score of each player raising by the result
@@ -49,6 +53,8 @@ public:
 												   Player &player2);
 	/**
 	* @brief  play till player get 152 points or more, and he is the winner
+	* @params IN Player &player1 - the first player in the game
+	*		  IN Player &player2 - the second player in the game
 	* @return this function has no return value
 	* @notes  this function change the score of the players,
 	*			such that the score of each player raising by the result
@@ -57,11 +63,13 @@ public:
 	*/
 
 	void play_till_difference_of_25_points(Player &player1, 
-								 Player &player2);
+									       Player &player2);
 	/**
 	* @brief  play till there is difference of 25 points or more between,
 	*			the scores of the players, and the player with the highest
 	*			score wins
+	* @params IN Player &player1 - the first player in the game
+	*		  IN Player &player2 - the second player in the game
 	* @return this function has no return value
 	* @notes  this function change the score of the players,
 	*			such that the score of each player raising by the result
