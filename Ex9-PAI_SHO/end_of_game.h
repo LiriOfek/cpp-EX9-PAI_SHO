@@ -9,15 +9,19 @@ Purpose: This header file contain class of End_Of_Game, inherits from
 #pragma once
 
 #include "round_of_game.h"
+#include <cmath>
 
 const unsigned int TOTAL_NUMBER_OF_ROUNDS = 10;
 const unsigned int START_ROUND = 1;
 const char* const PLAYER_1_WON = "Player 1 won!";
 const char* const PLAYER_2_WON = "Player 2 won!";
+const int POINTS_FOR_WIN = 152;
+const int DIFFERENCE_FOR_WIN = 25;
 
 class End_Of_Game : public Round_Of_Game {
 public:
-	void play_10_rounds(Player &player1, Player &player2);
+	void play_10_rounds(Player &player1, 
+						Player &player2);
 	/**
 	* @brief  play 10 rounds of the game, call function that handle
 	*			tie situation, and call to function that
@@ -29,7 +33,8 @@ public:
 	* @author  Liri
 	*/
 
-	void handle_tie_after_10_rounds(Player &player1, Player &player2);
+	void handle_tie_after_10_rounds(Player &player1, 
+									Player &player2);
 	/**
 	* @brief  if there was a tie than continue in the game till there
 	*			is no tie
@@ -40,9 +45,23 @@ public:
 	* @author  Liri
 	*/
 
-	void play_till_player_get_more_than_152_points(Player &player1, Player &player2);
+	void play_till_player_get_more_than_152_points(Player &player1, 
+												   Player &player2);
 	/**
 	* @brief  play till player get 152 points or more, and he is the winner
+	* @return this function has no return value
+	* @notes  this function change the score of the players,
+	*			such that the score of each player raising by the result
+	*			of the dice
+	* @author  Liri
+	*/
+
+	void play_till_difference_of_25_points(Player &player1, 
+								 Player &player2);
+	/**
+	* @brief  play till there is difference of 25 points or more between,
+	*			the scores of the players, and the player with the highest
+	*			score wins
 	* @return this function has no return value
 	* @notes  this function change the score of the players,
 	*			such that the score of each player raising by the result

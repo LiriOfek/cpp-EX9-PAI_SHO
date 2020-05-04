@@ -9,5 +9,5 @@ Purpose: This file contain class of PaiShoGame, that inherits from
 #include "PaiShoGame.h"
 
 void PaiShoGame::play() {
-	play_till_player_get_more_than_152_points(player1, player2);
+	play_till_difference_of_25_points(player1, player2);
 }
