@@ -27,12 +27,12 @@ public:
 	* @author  Liri
 	*/
 
-	unsigned int roll_die();
+	unsigned int roll_die_according_to_interface();
 	/**
-	* @brief  roll regulare die, and add to the player score the result
-	*			of the die
+	* @brief  roll regulare die according to the interface, and add to the 
+	*			player score the result of the die
 	* @params OUT unsigned int die_result - the result of the die
-	* @return the result of the die
+	* @return the result of the die according to the interface
 	* @note   the score of the player is rising by the result of the die
 	* @author  Liri
 	*/

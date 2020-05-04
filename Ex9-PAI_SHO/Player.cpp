@@ -12,9 +12,21 @@ Player::Player() {
 	score = 0;
 }
 
-unsigned int Player::roll_die() {
+unsigned int Player::roll_die_according_to_interface() {
 	unsigned int die_result;
-	die_result = roll_3_dice_with_rising_sides();
+
+	switch (interface_of_rolling_dice) {
+	case(REGULAR_DICE):
+		die_result = roll_regulare_die();
+		break;
+	case(HIGHEST_SCORE_OF_3_DICES_WITH_10_SIDES):
+		die_result = roll_3_dice_with_10_sides();
+		break;
+	case(HIGHEST_SCORE_OF_DICES_WITH_RISING_SIDES):
+		die_result = roll_3_dice_with_rising_sides();
+		break;
+	}
+
 	score += die_result;
 	return die_result;
 }

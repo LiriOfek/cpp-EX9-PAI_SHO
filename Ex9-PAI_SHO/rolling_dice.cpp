@@ -36,7 +36,7 @@ unsigned int Rolling_Dice::roll_3_dice_with_rising_sides() {
 		 number_of_dice++) 
 	{
 		unsigned int current_dice_result = (std::rand() % 
-			(number_of_dice + START_NUMBER_OF_SIDES_OF_DIE) + DIE_START);
+			(number_of_dice + START_NUMBER_OF_SIDES_OF_DIE - 1) + DIE_START);
 		if (highest_dice_result < current_dice_result) {
 			highest_dice_result = current_dice_result;
 		}

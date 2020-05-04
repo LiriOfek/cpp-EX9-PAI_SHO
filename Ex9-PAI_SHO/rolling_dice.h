@@ -12,7 +12,7 @@ const unsigned int NUMBER_OF_SIDES_OF_REGULARE_DIE = 6;
 const unsigned int DIE_START = 1;
 const int NUMBER_OF_DICE = 3;
 const int DIE_WITH_10_SIDES = 10;
-const int START_NUMBER_OF_SIDES_OF_DIE = 5;
+const int START_NUMBER_OF_SIDES_OF_DIE = 6;
 
 #include <iostream>
 #include <cstdlib>
