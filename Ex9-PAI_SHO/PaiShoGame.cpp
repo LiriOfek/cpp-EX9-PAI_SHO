@@ -13,7 +13,7 @@ void PaiShoGame::play() {
 }
 
 void PaiShoGame::play_10_rounds() {
-	for (unsigned int number_of_round = 1;
+	for (unsigned int number_of_round = START_ROUND;
 		 number_of_round <= TOTAL_NUMBER_OF_ROUNDS;
 		 number_of_round++) 
 	{

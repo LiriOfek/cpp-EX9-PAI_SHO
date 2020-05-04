@@ -11,8 +11,8 @@ Purpose: This header file contain class of Player, with declaration of
 #include <cstdlib>
 #include <ctime>
 
-unsigned int NUMBER_OF_SIDES_OF_REGULARE_DIE = 6;
-unsigned int DIE_START = 1;
+const unsigned int NUMBER_OF_SIDES_OF_REGULARE_DIE = 6;
+const unsigned int DIE_START = 1;
 
 class Player {
 	unsigned int score;

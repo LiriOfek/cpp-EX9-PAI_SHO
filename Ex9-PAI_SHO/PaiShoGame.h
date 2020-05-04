@@ -9,7 +9,8 @@ Purpose: This header file contain class of PaiShoGame, that inherits from
 #pragma once
 #include "Player.h"
 
-int TOTAL_NUMBER_OF_ROUNDS = 10;
+const unsigned int TOTAL_NUMBER_OF_ROUNDS = 10;
+const unsigned int START_ROUND = 1;
 
 class PaiShoGame :public Player {
 	Player player1;
