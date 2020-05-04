@@ -16,7 +16,7 @@ const char* const PLAYER2_SCORE = "Player 2 score: ";
 
 class Round_Of_Game : public Player {
 public:
-	void round_of_game(int number_of_round, 
+	void round_of_game(unsigned int number_of_round,
 					   Player &player1, 
 					   Player &player2);
 	/**
@@ -28,6 +28,17 @@ public:
 	* @return this function has no return value
 	* @note   the score of the players is rising by the result of the die
 	*			of each of them
+	* @author  Liri
+	*/
+
+	void check_use_of_regulare_die(unsigned int result_of_die);
+	/**
+	* @brief  check if the player use regulare die - if not than throw 
+	*			error
+	* @params   IN unsigned int result_of_die - the result of the die
+	* @return this function has no return value
+	* @note   this function throw exception if the result of the die is 
+	*			bigger than the number of sides of regulare die
 	* @author  Liri
 	*/
 

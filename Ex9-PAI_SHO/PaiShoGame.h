@@ -9,6 +9,7 @@ Purpose: This header file contain class of PaiShoGame, that inherits from
 #pragma once
 #include "Player.h"
 #include "end_of_game.h"
+#include "game_exceptions.h"
 
 /*interface of end of game*/
 const int LOWEST_SCORE = 0;

@@ -9,20 +9,25 @@ Purpose: This file contain class of PaiShoGame, that inherits from
 #include "PaiShoGame.h"
 
 void PaiShoGame::play() {
-	set_interface_end_of_game();
-	set_interface_roll_dice();
+	try {
+		set_interface_end_of_game();
+		set_interface_roll_dice();
 
-	switch (interface_end_of_game) {
-	case LOWEST_SCORE:
-		play_10_rounds(player1, player2);
-		break;
-	case MORE_THAN_152_POINTS:
-		play_till_player_get_more_than_152_points(player1, player2);
-		break;
-	case DIFFERENCE_OF_25:
-		play_till_difference_of_25_points(player1, player2);
-		break;
-	}			
+		switch (interface_end_of_game) {
+		case LOWEST_SCORE:
+			play_10_rounds(player1, player2);
+			break;
+		case MORE_THAN_152_POINTS:
+			play_till_player_get_more_than_152_points(player1, player2);
+			break;
+		case DIFFERENCE_OF_25:
+			play_till_difference_of_25_points(player1, player2);
+			break;
+		}
+	}
+	catch (Exception_Not_Use_Regulare_Die&e) {
+		std::cout << e.what() << std::endl;
+	}
 }
 
 void PaiShoGame::set_interface_end_of_game() {
@@ -42,6 +47,12 @@ void PaiShoGame::set_interface_roll_dice() {
 			  << TYPE_2_ROLL_3_DICES_WITH_RISING_SIDES << std::endl
 			  << FOR_PLAYER1 << std::endl;
 	std::cin >> interface_of_roll_dice_for_player1;
+
+	//if (interface_of_roll_dice_for_player1 != REGULAR_DICE &&
+	//	interface_of_roll_dice_for_player1 != HIGHEST_SCORE_OF_3_DICES_WITH_10_SIDES &&
+	//	interface_of_roll_dice_for_player1 != HIGHEST_SCORE_OF_DICES_WITH_RISING_SIDES) {
+	//}
+
 	player1.set_interface_of_rolling_dice(interface_of_roll_dice_for_player1);
 
 	std::cout << FOR_PLAYER2 << std::endl;
