@@ -8,6 +8,13 @@ Purpose: This header file contain functions of Player,
 #include "Player.h"
 
 Player::Player() {
-		srand(static_cast<unsigned int>(time(0)));
-		score = 0;
+	srand(static_cast<unsigned int>(time(NULL)));
+	score = 0;
+}
+
+int Player::roll_die() {
+	int die_result;
+	die_result = std::rand() % NUMBER_OF_SIDES_OF_REGULARE_DIE + DIE_START;
+	score += die_result;
+	return die_result;
 }
