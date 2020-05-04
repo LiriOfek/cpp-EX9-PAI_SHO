@@ -28,6 +28,8 @@ public:
 	*			the game, if there was a tie than continue till there is
 	*			no tie and function that check who wins
 	* @return this function has no return value
+	* @notes  this function change the score of the players, such that the 
+	*			score of each player raising by the result of the dice
 	* @author  Liri
 	*/
 
@@ -37,6 +39,9 @@ public:
 	*			tie situation, and call to function that
 	*			check who wins
 	* @return this function has no return value
+	* @notes  this function change the score of the players,
+	*			such that the score of each player raising by the result
+	*			of the dice
 	* @author  Liri
 	*/
 
@@ -45,6 +50,9 @@ public:
 	* @brief  if there was a tie than continue in the game till there
 	*			is no tie
 	* @return this function has no return value
+	* @notes  this function change the score of the players,
+	*			such that the score of each player raising by the result
+	*			of the dice
 	* @author  Liri
 	*/
 
