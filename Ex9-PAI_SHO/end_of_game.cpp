@@ -16,7 +16,7 @@ void End_Of_Game::play_10_rounds(Player &player1, Player &player2) {
 		round_of_game(number_of_round, player1, player2);
 	}
 	handle_tie_after_10_rounds(player1, player2);
-	check_who_wins(player1, player2);
+	check_who_wins(player1.getScore() < player2.getScore());
 }
 
 void End_Of_Game::handle_tie_after_10_rounds(Player &player1, Player &player2) {
@@ -27,8 +27,17 @@ void End_Of_Game::handle_tie_after_10_rounds(Player &player1, Player &player2) {
 	}
 }
 
-void End_Of_Game::check_who_wins(Player &player1, Player &player2) {
-	if (player1.getScore() < player2.getScore()) {
+void End_Of_Game::play_till_player_get_more_than_152_points(Player &player1, Player &player2) {
+	int number_of_round = START_ROUND;
+	while (player1.getScore() < 152 && player2.getScore() < 152) {
+		round_of_game(number_of_round, player1, player2);
+		number_of_round++;
+	}
+	check_who_wins(player1.getScore() > player2.getScore());
+}
+
+void End_Of_Game::check_who_wins(int condition) {
+	if (condition) {
 		std::cout << std::endl << PLAYER_1_WON << std::endl;
 	}
 	else {
