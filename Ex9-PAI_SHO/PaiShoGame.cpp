@@ -11,6 +11,7 @@ Purpose: This file contain class of PaiShoGame, that inherits from
 void PaiShoGame::play() {
 	set_interface_end_of_game();
 	set_interface_roll_dice();
+
 	switch (interface_end_of_game) {
 	case LOWEST_SCORE:
 		play_10_rounds(player1, player2);
@@ -35,14 +36,15 @@ void PaiShoGame::set_interface_end_of_game() {
 void PaiShoGame::set_interface_roll_dice() {
 	int interface_of_roll_dice_for_player1;
 	int interface_of_roll_dice_for_player2;
-	std::cout << "How do you want each turn to be?" << std::endl
-		<< "Type 0 - At each turn the player roll regulare die, and the value of the die will be added to the player score" << std::endl
-		<< "Type 1 - At each turn the player roll 3 dice with 10 sides, and the value of the die with the highest number will be added to the player score" << std::endl
-		<< "Type 2 - At each turn the player roll 3 dice with rising number of sides, starting from 6 sides, and the value of the die with the higest number will be added to the player score" << std::endl
-		<< "For player 1: " << std::endl;
+	std::cout << HOW_USER_WANTS_EACH_TURN << std::endl
+		   	  << TYPE_0_ROLL_REGULARE_DIE << std::endl
+			  << TYPE_1_ROLL_3_DICES_WITH_10_SIDES << std::endl
+			  << TYPE_2_ROLL_3_DICES_WITH_RISING_SIDES << std::endl
+			  << FOR_PLAYER1 << std::endl;
 	std::cin >> interface_of_roll_dice_for_player1;
 	player1.set_interface_of_rolling_dice(interface_of_roll_dice_for_player1);
-	std::cout << "For player 2: " << std::endl;
+
+	std::cout << FOR_PLAYER2 << std::endl;
 	std::cin >> interface_of_roll_dice_for_player2;
 	player2.set_interface_of_rolling_dice(interface_of_roll_dice_for_player2);
 }
