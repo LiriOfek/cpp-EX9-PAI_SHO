@@ -122,6 +122,7 @@
     <ClInclude Include="end_of_game.h" />
     <ClInclude Include="PaiShoGame.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="rolling_dice.h" />
     <ClInclude Include="round_of_game.h" />
   </ItemGroup>
   <ItemGroup>
@@ -129,6 +130,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="PaiShoGame.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="rolling_dice.cpp" />
     <ClCompile Include="round_of_game.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

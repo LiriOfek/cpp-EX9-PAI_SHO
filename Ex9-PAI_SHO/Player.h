@@ -7,19 +7,14 @@ Purpose: This header file contain class of Player, with declaration of
 
 #pragma once
 
-#include <iostream>
-#include <cstdlib>
-#include <ctime>
-
-const unsigned int NUMBER_OF_SIDES_OF_REGULARE_DIE = 6;
-const unsigned int DIE_START = 1;
+#include "rolling_dice.h"
 
 /*interface of rolling dice*/
 const unsigned int REGULAR_DICE = 0;
 const unsigned int HIGHEST_SCORE_OF_3_DICES_WITH_10_SIDES = 1;
 const unsigned int HIGHEST_SCORE_OF_DICES_WITH_RISING_SIDES = 2;
 
-class Player {
+class Player : public Rolling_Dice{
 	unsigned int score;
 	unsigned int interface_of_rolling_dice;
 public:
@@ -32,7 +27,7 @@ public:
 	* @author  Liri
 	*/
 
-	unsigned int roll_regulare_die();
+	unsigned int roll_die();
 	/**
 	* @brief  roll regulare die, and add to the player score the result
 	*			of the die

@@ -27,6 +27,9 @@
     <ClInclude Include="end_of_game.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="rolling_dice.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Player.cpp">
@@ -42,6 +45,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="end_of_game.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="rolling_dice.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
