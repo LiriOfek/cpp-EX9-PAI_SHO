@@ -19,6 +19,6 @@ void Round_Of_Game::round_of_game(int number_of_round,
 }
 
 unsigned int Round_Of_Game::play_turn(Player &player) {
-	unsigned int die_result = player.roll_die_according_to_interface();
+	unsigned int die_result = player.roll_dice_according_to_interface();
 	return die_result;
 }

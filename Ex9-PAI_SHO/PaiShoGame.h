@@ -32,6 +32,7 @@ public:
 	*			score of each player raising by the result of the dice
 	* @author  Liri
 	*/
+
 	void set_interface_end_of_game();
 	/**
 	* @brief  set the interface of the end of the game according to the choise
@@ -41,4 +42,6 @@ public:
 	*			choise of the user
 	* @author  Liri
 	*/
+
+	void set_interface_roll_dice();
 };

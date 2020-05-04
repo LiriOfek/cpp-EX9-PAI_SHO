@@ -12,7 +12,7 @@ Player::Player() {
 	score = 0;
 }
 
-unsigned int Player::roll_die_according_to_interface() {
+unsigned int Player::roll_dice_according_to_interface() {
 	unsigned int die_result;
 
 	switch (interface_of_rolling_dice) {

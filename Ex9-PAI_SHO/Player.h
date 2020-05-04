@@ -27,7 +27,7 @@ public:
 	* @author  Liri
 	*/
 
-	unsigned int roll_die_according_to_interface();
+	unsigned int roll_dice_according_to_interface();
 	/**
 	* @brief  roll regulare die according to the interface, and add to the 
 	*			player score the result of the die
