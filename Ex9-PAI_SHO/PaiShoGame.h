@@ -9,16 +9,34 @@ Purpose: This header file contain class of PaiShoGame, that inherits from
 #pragma once
 #include "Player.h"
 
+int TOTAL_NUMBER_OF_ROUNDS = 10;
+
 class PaiShoGame :public Player {
 	Player player1;
 	Player player2;
 public:
-
-	void play_10_turns();
+	void play();
 	/**
-	* @brief  play 10 rounds of the game, if there was a tie, than 
-	*			continue till there is no tie, and call to function that
+	* @brief  play Pai Sho game - call function that play 10 rounds of
+	*			the game, if there was a tie than continue till there is
+	*			no tie and function that check who wins
+	* @return this function has no return value
+	* @author  Liri
+	*/
+
+	void play_10_rounds();
+	/**
+	* @brief  play 10 rounds of the game, call function that handle
+	*			tie situation, and call to function that
 	*			check who wins
+	* @return this function has no return value
+	* @author  Liri
+	*/
+
+	void handle_tie_after_10_rounds();
+	/**
+	* @brief  if there was a tie than continue in the game till there
+	*			is no tie
 	* @return this function has no return value
 	* @author  Liri
 	*/
