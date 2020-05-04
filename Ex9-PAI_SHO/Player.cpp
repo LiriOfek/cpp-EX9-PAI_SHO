@@ -12,9 +12,13 @@ Player::Player() {
 	score = 0;
 }
 
-int Player::roll_die() {
-	int die_result;
+unsigned int Player::roll_die() {
+	unsigned int die_result;
 	die_result = std::rand() % NUMBER_OF_SIDES_OF_REGULARE_DIE + DIE_START;
 	score += die_result;
 	return die_result;
+}
+
+unsigned int Player::getScore() {
+	return score;
 }

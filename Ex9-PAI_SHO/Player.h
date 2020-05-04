@@ -11,11 +11,11 @@ Purpose: This header file contain class of Player, with declaration of
 #include <cstdlib>
 #include <ctime>
 
-int NUMBER_OF_SIDES_OF_REGULARE_DIE = 6;
-int DIE_START = 1;
+unsigned int NUMBER_OF_SIDES_OF_REGULARE_DIE = 6;
+unsigned int DIE_START = 1;
 
 class Player {
-	int score;
+	unsigned int score;
 public:
 	Player();
 	/**
@@ -25,13 +25,22 @@ public:
 	* @note   create Player, and set its score to zero
 	* @author  Liri
 	*/
-	int roll_die();
+
+	unsigned int roll_die();
 	/**
 	* @brief  roll regulare die, and add to the player score the result
 	*			of the die
-	* @params OUT int dice_result - the result of the die
+	* @params OUT unsigned int dice_result - the result of the die
 	* @return the result of the die
 	* @note   the score of the player is rising by the result of the die
+	* @author  Liri
+	*/
+
+	unsigned int getScore();
+	/**
+	* @brief  return the personal score of the player
+	* @params OUT unsigned int score - the personal score of the player
+	* @return the personal score of the player
 	* @author  Liri
 	*/
 };
