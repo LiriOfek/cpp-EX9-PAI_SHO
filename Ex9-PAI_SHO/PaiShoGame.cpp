@@ -9,7 +9,18 @@ Purpose: This file contain class of PaiShoGame, that inherits from
 #include "PaiShoGame.h"
 
 void PaiShoGame::play() {
-	play_till_difference_of_25_points(player1, player2);
+	set_interface_end_of_game();
+	switch (interface_end_of_game) {
+	case LOWEST_SCORE:
+		play_10_rounds(player1, player2);
+		break;
+	case MORE_THAN_152_POINTS:
+		play_till_player_get_more_than_152_points(player1, player2);
+		break;
+	case DIFFERENCE_OF_25:
+		play_till_difference_of_25_points(player1, player2);
+		break;
+	}			
 }
 
 void PaiShoGame::set_interface_end_of_game() {
