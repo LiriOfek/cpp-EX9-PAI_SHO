@@ -13,6 +13,13 @@ Purpose: This file contain class of exceptions that inherits from
 using namespace std;
 
 struct Exception_Not_Use_Regulare_Die : public exception {
+	/**
+	* @brief  throw exception for not using regulare die
+	* @return const char* that explain the user can't use die
+	*			which has more than 6 sides
+	* @note   throw exception
+	* @author  Liri
+	*/
 	const char * what() const throw () {
 		return "Error - You can use only one regulare die with 6 sides!";
 	}
