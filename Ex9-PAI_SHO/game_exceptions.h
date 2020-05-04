@@ -35,6 +35,20 @@ struct Exception_Same_Result_Of_Die : public exception {
 	* @author  Liri
 	*/
 	const char * what() const throw () {
-		return "Error - During 8 turns the result of your die was the same, therefore you are using treated die!";
+		return "Error - During 8 turns the result of your die was the same, you can't use treated die!";
+	}
+};
+
+struct Exception_Not_Option : public exception {
+	/**
+	* @brief  throw exception for using treated die, because user chose 
+	*			number that not in the range
+	* @return const char* that explain the user can't use treated die
+	*			which return the same result
+	* @note   throw exception
+	* @author  Liri
+	*/
+	const char * what() const throw () {
+		return "Error - You can use choose number between 0-2!";
 	}
 };

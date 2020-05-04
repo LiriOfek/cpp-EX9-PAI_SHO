@@ -9,6 +9,9 @@ Purpose: This header file contain class of Round_Of_Game, inherits from
 
 #include "Player.h"
 
+const unsigned int NUMBER_OF_TURNS = 8;
+const unsigned int INITIAL_INDEX = 0;
+
 const char* const ROUND = "Round ";
 const char* const COLON = ":";
 const char* const PLAYER1_SCORE = "Player 1 score: ";

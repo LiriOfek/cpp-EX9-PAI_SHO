@@ -30,6 +30,9 @@ const char* const TYPE_2_ROLL_3_DICES_WITH_RISING_SIDES = "Type 2 - At each turn
 
 const char* const FOR_PLAYER1 = "For player 1: ";
 const char* const FOR_PLAYER2 = "For player 2: ";
+const int VALID_OPTION_0 = 0;
+const unsigned int VALID_OPTION_1 = 1;
+const unsigned int VALID_OPTION_2 = 2;
 
 class PaiShoGame :public End_Of_Game {
 	Player player1;
@@ -39,7 +42,8 @@ public:
 	void play();
 	/**
 	* @brief  play Pai Sho game - call function that play the game accorfing
-	*			to the interface of the end of the game
+	*			to the interface of the end of the game, catch exceptions if
+	*			thrown
 	* @return this function has no return value
 	* @notes  this function change the score of the players, such that the
 	*			score of each player raising by the result of the dice
@@ -63,6 +67,16 @@ public:
 	* @return this function has no return value
 	* @notes  this function change the interface_of_rolling_dice of 
 	*			each player according to the choise of the user
+	* @author  Liri
+	*/
+
+	void check_if_user_choise_is_valid(unsigned int user_choise);
+	/**
+	* @brief  check if the user chose valid option, if not - throw 
+	*			exception
+	* @return this function has no return value
+	* @notes  this function throw exception if the user chose option that
+	*			is not valid
 	* @author  Liri
 	*/
 };

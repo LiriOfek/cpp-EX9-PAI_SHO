@@ -31,6 +31,9 @@ void PaiShoGame::play() {
 	catch (Exception_Same_Result_Of_Die &e) {
 		std::cout << e.what() << std::endl;
 	}
+	catch (Exception_Not_Option &e) {
+		std::cout << e.what() << std::endl;
+	}
 }
 
 void PaiShoGame::set_interface_end_of_game() {
@@ -39,6 +42,7 @@ void PaiShoGame::set_interface_end_of_game() {
 			  << TYPE_1_TO_END_WHEN_PLAYER_GET_152_POINTS_OR_MORE << std::endl
 			  << TYPE_2_THERE_IS_DIFFERENCE_OF_25_POINTS_OR_MORE_BETWEEN_THE_PLAYERS << std::endl;
 	std::cin >> interface_end_of_game;
+	check_if_user_choise_is_valid(interface_end_of_game);
 }
 
 void PaiShoGame::set_interface_roll_dice() {
@@ -49,16 +53,21 @@ void PaiShoGame::set_interface_roll_dice() {
 			  << TYPE_1_ROLL_3_DICES_WITH_10_SIDES << std::endl
 			  << TYPE_2_ROLL_3_DICES_WITH_RISING_SIDES << std::endl
 			  << FOR_PLAYER1 << std::endl;
+
 	std::cin >> interface_of_roll_dice_for_player1;
-
-	//if (interface_of_roll_dice_for_player1 != REGULAR_DICE &&
-	//	interface_of_roll_dice_for_player1 != HIGHEST_SCORE_OF_3_DICES_WITH_10_SIDES &&
-	//	interface_of_roll_dice_for_player1 != HIGHEST_SCORE_OF_DICES_WITH_RISING_SIDES) {
-	//}
-
+	check_if_user_choise_is_valid(interface_of_roll_dice_for_player1);
 	player1.set_interface_of_rolling_dice(interface_of_roll_dice_for_player1);
 
 	std::cout << FOR_PLAYER2 << std::endl;
 	std::cin >> interface_of_roll_dice_for_player2;
+	check_if_user_choise_is_valid(interface_of_roll_dice_for_player2);
 	player2.set_interface_of_rolling_dice(interface_of_roll_dice_for_player2);
+}
+
+void PaiShoGame::check_if_user_choise_is_valid(unsigned int user_choise) {
+	if (user_choise != VALID_OPTION_0 &&
+		user_choise != VALID_OPTION_1 &&
+		user_choise != VALID_OPTION_2) {
+		throw Exception_Not_Option();
+	}
 }
