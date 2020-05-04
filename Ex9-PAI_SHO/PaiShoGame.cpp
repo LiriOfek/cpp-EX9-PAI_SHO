@@ -28,6 +28,9 @@ void PaiShoGame::play() {
 	catch (Exception_Not_Use_Regulare_Die&e) {
 		std::cout << e.what() << std::endl;
 	}
+	catch (Exception_Same_Result_Of_Die &e) {
+		std::cout << e.what() << std::endl;
+	}
 }
 
 void PaiShoGame::set_interface_end_of_game() {
